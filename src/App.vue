@@ -60,19 +60,19 @@ export default{
                     <!-- {{-- Mostra i linguaggi selezionati --}} -->
                     <div>
                         <p>Programming languages:</p>
-                        <!-- <div class="card-text d-flex gap-2 fw-normal">
-                            @foreach ($project->technologies as $technology)
-                                <p>{{ $technology->name }}</p>
-                            @endforeach
-                        </div> -->
+                        <div class="card-text d-flex gap-2 fw-normal" >
+                            
+                                <p v-for="technology in elem.technologies" :key="technology.id">{{ technology.name }}</p>
+                            
+                        </div>
                     </div>
 
                     <div class="d-flex gap-3">
                         <p class="">Project type:</p>
         
-                        <!-- @isset($project->type)
-                        <p class="fw-normal">{{ $project->type->name }}</p>
-                        @endisset -->
+                        
+                        <p class="fw-normal">{{ elem.type.name }}</p>
+                        
                     </div>
 
                     <a href="" class="btn btn-primary">View Details</a>
